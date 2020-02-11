@@ -5,13 +5,13 @@
 # Youtube Channel: https://goo.gl/fvkdwm 
 #=================================================
 
-name: Build_x86_64
+name: AutoBuild_x86_64_ssrSIP003
 
 on: 
   release:
     types: [published]
 
-  #push:
+  push:
     branches: 
       - master
 
@@ -68,7 +68,7 @@ jobs:
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         ./scripts/feeds install -a
-    - name: Configuration Customization - Build_x86_64
+    - name: Configuration Customization - AutoBuild_x86_64_ssrSIP003
       env:
         CONFIG_FILE: 'x86_64.config'
       run: |
